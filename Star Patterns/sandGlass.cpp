@@ -1,30 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void diamond(int n)
+void sandGlass(int n)
 {
     int i, j;
-    for (i = 0; i < n; i++)
+    for (i = n - 1; i >= 0; i--)
     {
-        for (j = 0; j < 2 * n - 1; j++)
+        for (j = 0; j <= (2 * n - 1); j++)
         {
             if (j < n - i - 1 || j > n + i - 1)
-            {
                 cout << " ";
-            }
             else
                 cout << "*";
         }
         cout << endl;
     }
-    for (i = n - 2; i >= 0; i--)
+
+    for (i = 1; i < n; i++)
     {
-        for (j = 0; j < 2 * n - 1; j++)
+        for (j = 0; j <= (2 * n - 1); j++)
         {
             if (j < n - i - 1 || j > n + i - 1)
-            {
                 cout << " ";
-            }
             else
                 cout << "*";
         }
@@ -37,6 +34,6 @@ int main()
     int n;
     cout << "Enter the no. of rows: ";
     cin >> n;
-    diamond(n);
+    sandGlass(n);
     return 0;
 }
