@@ -7,14 +7,7 @@ void InvLeftAlignRAT(int n)
     {
         for (int j = 1; j <= n; j++)
         {
-            if (j <= n - i)
-            {
-                cout << " ";
-            }
-            if (j > n - i)
-            {
-                cout << "*";
-            }
+            (j <= n - i) ? cout << " " : cout << "*";
         }
         cout << endl;
     }

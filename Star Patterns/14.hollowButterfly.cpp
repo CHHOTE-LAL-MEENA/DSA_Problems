@@ -10,7 +10,7 @@ void hollowButterfly(int n)
         {
             if (j == 0 || j == n - i - 1 || j == n + i - 1 || j == 2 * n - 2)
                 cout << "*";
-            else
+            else    
                 cout << " ";
         }
         cout << endl;

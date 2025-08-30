@@ -3,12 +3,13 @@ using namespace std;
 
 void Arrow(int n)
 {
-    int i, j;
-    for (i = 0; i < n; i++)
+    int i, j, size = 2 * n - 1;
+    for (i = 0; i < size; i++)
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < size; j++)
         {
-            if (i == 0 || j == 0 || j == n - 1 || i == n - 1)
+            int layer = min(min(i, j), min(size - i - 1, size - j - 1));
+            if (layer % 2 == 0)
                 cout << "*";
             else
                 cout << " ";

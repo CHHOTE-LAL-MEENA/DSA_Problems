@@ -9,9 +9,9 @@ void hollowSqaure(int n)
         for (j = 1; j <= n; j++)
         {
             if (i == 1 || j == 1 || i == n || j == n)
-                cout << " * ";
+                cout << "*";
             else
-                cout << "   ";
+                cout << " ";
         }
         cout << endl;
     }
