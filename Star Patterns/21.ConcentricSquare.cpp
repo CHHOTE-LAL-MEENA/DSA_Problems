@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void Arrow(int n)
+void concentricSquare(int n)
 {
     int i, j, size = 2 * n - 1;
     for (i = 0; i < size; i++)
@@ -23,6 +23,6 @@ int main()
     int n;
     cout << "Enter the no. of rows: ";
     cin >> n;
-    Arrow(n);
+    concentricSquare(n);
     return 0;
 }

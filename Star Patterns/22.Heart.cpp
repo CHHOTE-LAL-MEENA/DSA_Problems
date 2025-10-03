@@ -1,25 +1,37 @@
 #include <iostream>
 using namespace std;
 
-void Arrow(int n)
+void starPattern(int n)
 {
-    int i, j;
-    for (i = n - 2; i < n; i++)
-    {
-        for (j = 0; j < 2 * n - 1; j++)
-        {
-            if (j < n - i - 1 || j > n + i - 1)
-                cout << " ";
-            else
-                cout << "*";
+    for (int i = n/2; i <= n; i += 2) {
+        // print spaces before left side
+        for (int j = 1; j < n - i; j += 2) {
+            cout << " ";
         }
-        cout << endl;
+
+        // print left side stars
+        for (int j = 1; j <= i; j++) {
+            cout << "*";
+        }
+
+        // print spaces between two sides
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+
+        // print right side stars
+        for (int j = 1; j <= i; j++) {
+            cout << "*";
+        }
+
+        cout << "\n";
     }
-    for (i = n - 1; i >= 0; i--)
+
+    for (int i = n-1; i >= 0; i--)
     {
-        for (j = 0; j < 2 * n - 1; j++)
+        for (int j = 0; j < 2*n-1; j++)
         {
-            if (j < n - i - 1 || j > n + i - 1)
+            if (j<n-i-1||j>n+i-1)
                 cout << " ";
             else
                 cout << "*";
@@ -31,8 +43,8 @@ void Arrow(int n)
 int main()
 {
     int n;
-    cout << "Enter the no. of rows: ";
+    cout << "enter no. of rows: " << endl;
     cin >> n;
-    Arrow(n);
+    starPattern(n);
     return 0;
 }
